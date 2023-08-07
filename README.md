@@ -15,5 +15,14 @@
 * 레이아웃 구성 
 * 컨트롤러, 모델, 뷰 구성하기 (MVC)
     - 컨트롤러 구성
+      - 회원쪽 컨트롤러
+        - 회원가입 - /member/join
+        - 로그인 - /member/login
+        - 정보수정 - /member/info
+      - 작업관리 컨트롤러
+        - 작업목록 - /works
+        - 작업등록 - /works/add
+        - 작업수정 - /works/등록번호
+        - 작업삭제 - /works/delete/등록번호
     - 모델 구성
     - 뷰 구성
