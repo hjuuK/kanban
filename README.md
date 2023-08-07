@@ -2,6 +2,6 @@
 
 ## 1일차
 <details>
-    <summaty>작업 내용</summaty>
+    <summary>작업 내용</summary>
     1. 레이아웃 구성<br>
 </details>
