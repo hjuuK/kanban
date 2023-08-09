@@ -17,7 +17,7 @@ public class WorkDao {
         SqlSession sqlSession = DBConnection.getSession();
         long workNo = work.getWorkNo();
         int affectedRows = 0;
-        if (workNo > 0) { // 수정
+        if (workNo > 0L) { // 수정
             affectedRows = sqlSession.update("WorkListMapper.edit", work);
         } else { // 추가
             affectedRows = sqlSession.insert("WorkListMapper.add", work);

@@ -43,6 +43,9 @@
     <select id="list" parameterType="models.works.Work" resultMap="workMap">
         SELECT * FROM workList
             <trim prefix="WHERE" suffixOverrides="AND | OR">
+                <if test="userNo >= 0">
+                    userNo=#{userNo} AND
+                </if>
                 <if test="status != null">
                     status=#{status} AND
                 </if>

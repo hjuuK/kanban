@@ -1,9 +1,16 @@
 package models.works;
 
 public class DeleteService {
-    private WorkDao workDao = new WorkDao();
+    private WorkDao workDao;
+
+    public DeleteService(WorkDao workDao) { // 생성자 매개변수 이용 -> 의존성 주입
+        this.workDao = workDao;
+    }
 
     public void delete(long workNo) {
         boolean result = workDao.delete(workNo);
+        if (!result) {
+            throw new WorkDeleteException();
+        }
     }
 }
