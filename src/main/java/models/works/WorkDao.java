@@ -76,4 +76,13 @@ public class WorkDao {
 
         return items;
     }
+
+    public boolean exists(long workNo) {
+        SqlSession sqlSession = DBConnection.getSession();
+        Work params = new Work();
+        params.setWorkNo(workNo);
+        int cnt = sqlSession.selectOne("WorkListMapper.exists", params);
+
+        return cnt > 0;
+    }
 }

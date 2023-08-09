@@ -15,7 +15,7 @@ public class WorksURLRouter implements URLRouter {
     public void route(HttpServletRequest req, HttpServletResponse resp, String location) {
         String mode = getMode(req.getRequestURI(), location);
         mode = mode == null || mode.isBlank() ? "list" : mode;
-        if (mode.matches("\\d")) { // 작업조회 모드
+        if (mode.matches("\\d*")) { // 작업조회 모드      // *: 최소매칭 / +: 최대매칭
             mode = "view";
         }
 
