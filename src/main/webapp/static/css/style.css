@@ -10,6 +10,11 @@ body { margin: 0; }
 
 /* 사이트 기준 너비 */
 .layout_width { max-width: 1300px; min-width: 1000px; margin: 0 auto; padding: 0 10px; }
+section.contents { max-width: 1000px; background: #fff; box-shadow: 3px 3px 10px #ccc; padding: 10px 20px 20px;
+    margin-top: 20px; border-radius: 15px; }
+
+/* 공통 배경 이미지 */
+html { background:url("../images/bg.png") no-repeat center top; background-size: cover: 100%; }
 
 /* 사이트 상단 공통 */
 header { background: #000; }
@@ -23,3 +28,26 @@ h1 { font-size: 1.9rem; border-bottom: 1px solid #000; margin-bottom: 30px; padd
 input[type='text'],
 input[type='password'],
 input[type='email'] { border: 1px solid #d5d5d5; height: 45px; border-radius: 3px; width: 100%; padding: 0 15px; font-size: 1.3rem;}
+dl { display: flex; padding: 10px 0; border-bottom: 1px solid #d5d5d5; }
+dl:first-of-type { border-top: 1px solid #d5d5d5 ; }
+dt { width: 100px; }
+dd { flex-grow: 1; }
+
+/* 탭 형태의 라디오 버튼 */
+.rdo_tab { display: none; }
+.rdo_tab+label { border: 1px solid #000; padding: 4px 10px; border-radius: 5px; cursor: pointer; margin: 5px 3px 5px 0; }
+.rdo_tab:checked+label { background: #000; color: #fff; }
+
+/* 공통 버튼 스타일 */
+.btns { text-align: center; margin: 10px 0; }
+.btns button { height: 45px; width: 200px; font-size: 1.4rem; font-weight: bold; border: 1px solid #000; cursor: pointer;
+    background: #fff; border-radius: 3px; }
+.btns button:last-of-type { background: #000; color: #fff; margin-left: 15px; }
+
+/* 공통 정렬 */
+.ac { text-align: center; }
+.al { text-align: left; }
+.ar { text-align: right; }
+
+/* 공통 여백 */
+.mt20 { margin-top: 20px; }

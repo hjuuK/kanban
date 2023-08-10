@@ -6,7 +6,7 @@
         <c:if test="${statusList != null}">
             <c:forEach var="status" items="${statusList}" varStatus="s">
                 <input type="radio" name="status" value="${status[0]}" id="status_${s.index}"
-                    ${work.status.name() == status[0] ? "checked" : ""}>
+                    ${work.status.name() == status[0] ? "checked" : ""} class="rdo_tab">
                 <label for="status_${s.index}">${status[1]}</label>
             </c:forEach>
         </c:if>
