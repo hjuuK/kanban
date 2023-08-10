@@ -1,0 +1,7 @@
+main { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; z-index: 0; }
+#site_top { position: relative; z-index: 1; }
+#frmLogin { background: #fff; width: 350px; margin: 0 auto; padding: 25px; border-radius: 15px; box-shadow: 3px 3px 10px #ccc; }
+#frmLogin input[type='text'],
+#frmLogin input[type='password'] { margin-bottom: 5px; }
+#frmLogin button { width: 100%; height: 40px; color: #fff; background: #000; font-size: 1.2rem; font-weight: bold;
+    border: 0; border-radius: 3px; margin-top: 10px; cursor: pointer; }

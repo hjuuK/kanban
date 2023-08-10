@@ -17,7 +17,7 @@
     - 컨트롤러 구성
       - 회원쪽 컨트롤러
         - 회원가입 - /member/join
-        - 로그인 - /member/login
+        - 로그인 - /member/login + /(메인)
         - 정보수정 - /member/info
       - 작업관리 컨트롤러
         - 작업목록 - /works
@@ -65,5 +65,14 @@
 * 칸반 보기 컨트롤러 처리
 * 칸반 삭제 컨트롤러 처리
 * 기본 스타일 처리
+
+## 6일차
+* 기본 스타일 처리
+* 메인페이지 로그인 양식
 * 회원가입 양식 구성하기
 * 회원가입 처리하기
+  - 모델 구성
+  - models/member/JoinService.java : 가입 
+  - models/member/Users.java
+  - models/member/UsersDao.java
+  - models/member/JoinValidator.java

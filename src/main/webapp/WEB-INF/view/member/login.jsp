@@ -6,18 +6,11 @@
 <c:url var="findIdUrl" value="/member/find_id" />
 <c:url var="findPwUrl" value="/member/find_pw" />
 <layout:main title="로그인">
-    <form name="frmLogin" method="POST" action="${action}" autocomplete="off">
-        <dl>
-            <dt>아이디</dt>
-            <dd>
-                <input type="text" name="userId">
-            </dd>
-        <dl>
-            <dt>비밀번호</dt>
-            <dd>
-                <input type="password" name="userPw">
-            </dd>
-        </dl>
+    <form id="frmLogin" name="frmLogin" method="POST" action="${action}" autocomplete="off">
+
+        <input type="text" name="userId" placeholder="아이디">
+        <input type="password" name="userPw" placeholder="비밀번호">
+
         <div>
             <input type="checkbox" name="saveId" value="true" id="saveId">
             <label for="saveId">아이디 저장</label>
