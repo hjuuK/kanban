@@ -14,7 +14,7 @@ public class DeleteController implements Controller {
     public void get(HttpServletRequest req, HttpServletResponse resp) {
         try {
             DeleteService deleteService = WorkServiceManager.getInstance().deleteService();
-            long workNo = UrlUtils.getPatternData(req, "works/(\\d*)");
+            long workNo = UrlUtils.getPatternData(req, "delete/(\\d*)");
             deleteService.delete(workNo);
 
             // 성공시 -> 목록 이동
