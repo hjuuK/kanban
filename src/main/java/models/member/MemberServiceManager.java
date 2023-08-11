@@ -24,4 +24,12 @@ public class MemberServiceManager {
     public JoinService joinService() {
         return new JoinService(usersDao(), joinValidator());
     }
+
+    public LoginValidator loginValidator() {
+        return new LoginValidator(usersDao());
+    }
+
+    public LoginService loginService() {
+        return new LoginService(loginValidator(), usersDao());
+    }
 }

@@ -6,7 +6,7 @@
 <c:url var="findIdUrl" value="/member/find_id" />
 <c:url var="findPwUrl" value="/member/find_pw" />
 <layout:main title="로그인">
-    <form id="frmLogin" name="frmLogin" method="POST" action="${action}" autocomplete="off">
+    <form id="frmLogin" name="frmLogin" method="POST" action="${action}" autocomplete="off" target="ifrmProcess">
 
         <input type="text" name="userId" placeholder="아이디">
         <input type="password" name="userPw" placeholder="비밀번호">
