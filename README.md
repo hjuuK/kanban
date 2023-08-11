@@ -82,5 +82,8 @@
 * 비밀번호 복잡성처리
 * 휴대성 유효성 검사 처리
 * 로그인 구현하기
+  - 모델 구성
+  - models/member/LoginService.java
+  - models/member/LoginValidator.java
 * 로그아웃 구현하기
 * 아이디 저장하기 구현하기
