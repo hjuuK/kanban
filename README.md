@@ -87,3 +87,27 @@
   - models/member/LoginValidator.java
 * 로그아웃 구현하기
 * 아이디 저장하기 구현하기
+
+## 8일차
+* 아이디 저장하기 구현하기
+  쿠키
+  1) 쿠키 생성단계
+    응답 헤더 : Set-Cookie :
+    HttpServletResponse
+      AddCookie(Cookie cookie)
+  2) 쿠키 저장 단계
+    브라우저가 저장
+  3) 쿠키 전송 단계
+    요청 헤더 : cookie 
+    HttpServletRequest
+      Cooke[] getCookies()
+* 페이지 회원 인가 구현하기
+  web.xml
+  <error-page>
+    <error-code>4xx|5xx</error-code>
+    <location>에러페이지 출력할 jsp 경로</location>
+  </error-page>
+* 작업 등록시 회원 정보 추가
+* 작업 수정/삭제시 본인 작업 내역만 처리 가능하게 통제
+* 작업 등록/수정시 이미지 에디터 추가
+* 작업 등록/수정시 파일 첨부 추가
