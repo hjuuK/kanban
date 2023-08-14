@@ -8,11 +8,11 @@
 <layout:main title="로그인">
     <form id="frmLogin" name="frmLogin" method="POST" action="${action}" autocomplete="off" target="ifrmProcess">
 
-        <input type="text" name="userId" placeholder="아이디">
+        <input type="text" name="userId" placeholder="아이디" value="${cookie.saveId.value}">
         <input type="password" name="userPw" placeholder="비밀번호">
 
         <div>
-            <input type="checkbox" name="saveId" value="true" id="saveId">
+            <input type="checkbox" name="saveId" value="true" id="saveId"${cookie.saveId == null ? "" : " checked"}>
             <label for="saveId">아이디 저장</label>
         </div>
         <div>

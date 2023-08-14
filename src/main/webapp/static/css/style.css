@@ -22,6 +22,7 @@ header { background: #000; }
 #site_top a { color: #fff; font-size: 1.5rem; }
 #site_top a * { color: #fff;font-size: 1.65rem; vertical-align: middle; }
 #site_top .right a { margin-left: 10px; }
+#site_top .userinfo { font-size: 1.1rem; color: #fff; margin-right: 10px; }
 
 /* 공통 스타일 */
 h1 { font-size: 1.9rem; border-bottom: 1px solid #000; margin-bottom: 30px; padding-bottom: 12px; }
@@ -40,9 +41,10 @@ dd { flex-grow: 1; }
 
 /* 공통 버튼 스타일 */
 .btns { text-align: center; margin: 10px 0; }
-.btns button { height: 45px; width: 200px; font-size: 1.4rem; font-weight: bold; border: 1px solid #000; cursor: pointer;
+.btns button, .btns .btn { height: 45px; width: 200px; font-size: 1.4rem; font-weight: bold; border: 1px solid #000; cursor: pointer;
     background: #fff; border-radius: 3px; }
 .btns button:last-of-type { background: #000; color: #fff; margin-left: 15px; }
+.btns a { display: inline-block; line-height: 43px; }
 
 /* 공통 정렬 */
 .ac { text-align: center; }

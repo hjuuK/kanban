@@ -20,7 +20,7 @@ public class LoginController implements Controller {
     public void post(HttpServletRequest req, HttpServletResponse resp) {
         try {
             LoginService loginService = MemberServiceManager.getInstance().loginService();
-            loginService.login(req);
+            loginService.login(req, resp);
 
             // 로그인 성공 -> 작업 목록 이동
             go(resp, req.getContextPath() + "/works", "parent");
