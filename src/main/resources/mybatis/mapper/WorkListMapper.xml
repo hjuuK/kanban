@@ -4,6 +4,7 @@
     <resultMap id="workMap" type="models.works.Work">
         <result column="workNo" property="workNo" />
         <result column="userNo" property="userNo" />
+        <result column="userNm" property="userNm" />
         <result column="status" property="status" typeHandler="org.apache.ibatis.type.EnumTypeHandler" />
         <result column="subject" property="subject" />
         <result column="content" property="content" />
@@ -37,23 +38,26 @@
     </delete>
 
     <select id="each" parameterType="models.works.Work" resultMap="workMap">
-        SELECT * FROM workList WHERE workNo=#{workNo}
+        SELECT w.*, u.userNm FROM workList w
+                        LEFT JOIN users u ON w.userNo = u.userNo
+            WHERE w.workNo=#{workNo}
     </select>
 
     <select id="list" parameterType="models.works.Work" resultMap="workMap">
-        SELECT * FROM workList
+        SELECT w.*, u.userNm FROM workList w
+                LEFT JOIN users u ON w.userNo = u.userNo
             <trim prefix="WHERE" suffixOverrides="AND | OR">
                 <if test="userNo >= 0">
-                    userNo=#{userNo} AND
+                    w.userNo=#{userNo} AND
                 </if>
                 <if test="status != null">
-                    status=#{status} AND
+                    w.status=#{status} AND
                 </if>
                 <if test="subject != null">
-                    subject LIKE #{subject} AND
+                    w.subject LIKE #{subject} AND
                 </if>
                 <if test="content != null">
-                    content LIKE #{content} AND
+                    w.content LIKE #{content} AND
                 </if>
             </trim>
             ORDER BY regDt DESC

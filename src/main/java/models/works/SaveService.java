@@ -1,6 +1,8 @@
 package models.works;
 
+import commons.MemberUtil;
 import jakarta.servlet.http.HttpServletRequest;
+import models.member.Users;
 import validators.Validator;
 
 public class SaveService {
@@ -32,7 +34,16 @@ public class SaveService {
 
         String workNo = req.getParameter("workNo");
         if (workNo != null && !workNo.isBlank()) {
-            work.setWorkNo(Long.parseLong(workNo));
+            long _workNo = Long.parseLong(workNo);
+            work.setWorkNo(_workNo);
+
+            Work _work = workDao.get(_workNo);
+            MemberUtil.isMine(req, _work.getUserNo());
+        }
+
+        if (MemberUtil.isLogin(req)) { // 로그인한 경우 회원번호 DB에 기록
+            Users users = MemberUtil.getUser(req);
+            work.setUserNo(users.getUserNo());
         }
 
         save(work);
