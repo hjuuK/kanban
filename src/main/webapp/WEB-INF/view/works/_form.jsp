@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<input type="file" id="file" multiple>
 <dl>
     <dt>작업 상태</dt>
     <dd>
@@ -22,5 +23,12 @@
     <dt>작업 내용</dt>
     <dd>
         <textarea name="content" id="content">${work.content}</textarea>
+        <button type="button" class="fileUpload image">이미지 추가</button>
+    </dd>
+</dl>
+<dl>
+    <dt>파일첨부</dt>
+    <dd>
+        <button type="button" class="fileUpload">업로드</button>
     </dd>
 </dl>

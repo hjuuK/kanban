@@ -2,6 +2,7 @@ package controllers.works;
 
 import static commons.ScriptUtils.*;
 
+import commons.MemberUtil;
 import commons.ScriptUtils;
 import commons.UrlUtils;
 import commons.ViewUtils;
@@ -31,13 +32,16 @@ public class SaveController implements Controller {
                 if (work == null) {
                     throw new WorkNotFoundException();
                 }
+
+                MemberUtil.isMine(req, work.getUserNo()); // 본인 작업만 수정 가능
+
             } else { // 추가
                 work = new Work();
             }
 
             req.setAttribute("work", work);
 
-            String[] addScript = {"ckeditor/ckeditor", "work/form"}; // .js
+            String[] addScript = {"ckeditor/ckeditor", "work/fileUpload", "work/form"}; // .js
             req.setAttribute("addScript", addScript);
 
             ViewUtils.load(req, resp, "works", mode);
