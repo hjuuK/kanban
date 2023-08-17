@@ -3,6 +3,7 @@
 <mapper namespace="WorkListMapper">
     <resultMap id="workMap" type="models.works.Work">
         <result column="workNo" property="workNo" />
+        <result column="gid" property="gid" />
         <result column="userNo" property="userNo" />
         <result column="userNm" property="userNm" />
         <result column="status" property="status" typeHandler="org.apache.ibatis.type.EnumTypeHandler" />
@@ -13,8 +14,8 @@
     </resultMap>
 
     <insert id="add" parameterType="models.works.Work" useGeneratedKeys="true" keyProperty="workNo">
-        INSERT INTO workList (userNo, status, subject, content)
-            VALUES (#{userNo}, #{status}, #{subject}, #{content})
+        INSERT INTO workList (gid, userNo, status, subject, content)
+            VALUES (#{gid}, #{userNo}, #{status}, #{subject}, #{content})
     </insert>
 
     <update id="edit" parameterType="models.works.Work">
