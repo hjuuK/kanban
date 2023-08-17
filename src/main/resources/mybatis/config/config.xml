@@ -39,5 +39,6 @@
     <mappers>
         <mapper resource="mybatis/mapper/UserMapper.xml" />
         <mapper resource="mybatis/mapper/WorkListMapper.xml" />
+        <mapper resource="mybatis/mapper/FileInfoMapper.xml" />
     </mappers>
 </configuration>

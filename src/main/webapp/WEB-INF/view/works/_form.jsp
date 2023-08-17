@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-<input type="file" id="file" multiple>
+<input type="file" id="file" class="dn" multiple>
 <dl>
     <dt>작업 상태</dt>
     <dd>
